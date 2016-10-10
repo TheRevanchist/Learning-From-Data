@@ -7,11 +7,10 @@ def create_points(number_of_points):
     inputs: number_of_points - the number of points we want in our dataset
     output: points - a 2D numpy array which contain the points """
     
-    #x = np.random.randint(-1000, 1001, size = number_of_points) 
     x = []
     y = []
     
-    for i in range(1000):
+    for i in range(number_of_points):
         x_i = random.uniform(-1, 1)
         y_i = random.uniform(-1, 1)
         x.append(x_i)
@@ -88,7 +87,7 @@ def run_iteration(points, number_of_points, y, weights):
              y - the labelling of the points
              weights - the weight vector
     outputs: weights - the updated weight vector
-             has_converged - 0/1 boolean value (coverged/not converged) 
+             has_not_converged - 0/1 boolean value (coverged/not converged) 
              a - our classification hypothesis """
     
     has_not_converged = 0      
